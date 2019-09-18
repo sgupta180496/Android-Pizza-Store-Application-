@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderActivity">
+
+    <TextView
+        android:id="@+id/receiptLabel"
+        android:layout_width="146dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/receiptLabel"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/basePriceLabel"
+        android:layout_width="100dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/basePriceTextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/receiptLabel" />
+
+    <TextView
+        android:id="@+id/basePriceValue"
+        android:layout_width="76dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/basePriceValue"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.646"
+        app:layout_constraintStart_toEndOf="@+id/basePriceLabel"
+        app:layout_constraintTop_toBottomOf="@+id/receiptLabel" />
+
+    <TextView
+        android:id="@+id/toppingLabel"
+        android:layout_width="100dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="44dp"
+        android:text="@string/toppingLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/basePriceLabel" />
+
+    <TextView
+        android:id="@+id/toppingPriceValue"
+        android:layout_width="76dp"
+        android:layout_height="39dp"
+        android:text="@string/toppingPrice"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.649"
+        app:layout_constraintStart_toEndOf="@+id/toppingLabel"
+        app:layout_constraintTop_toBottomOf="@+id/basePriceValue" />
+
+    <TextView
+        android:id="@+id/toppingNames"
+        android:layout_width="258dp"
+        android:layout_height="75dp"
+        android:text="@string/toppingNames"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toppingPriceValue" />
+
+    <TextView
+        android:id="@+id/deliveryCostLabel"
+        android:layout_width="128dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="44dp"
+        android:text="@string/deliveryCostLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toppingNames" />
+
+    <TextView
+        android:id="@+id/deliveryCostValue"
+        android:layout_width="76dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="20dp"
+        android:inputType="numberDecimal"
+        android:numeric="decimal"
+        android:text="@string/deliveryCostValue"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toBottomOf="@+id/deliveryCostLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toEndOf="@+id/deliveryCostLabel"
+        app:layout_constraintTop_toBottomOf="@+id/toppingNames"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="122dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="124dp"
+        android:layout_marginStart="44dp"
+        android:text="@string/totalLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/totalValue"
+        android:layout_width="76dp"
+        android:layout_height="39dp"
+        android:inputType="numberDecimal"
+        android:numeric="decimal"
+        android:text="@string/totalValue"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/deliveryCostValue"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/finishButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/finishButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.293" />
+</androidx.constraintlayout.widget.ConstraintLayout>

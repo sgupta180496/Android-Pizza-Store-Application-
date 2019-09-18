@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/addToppingButton"
+        android:layout_width="177dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/addToppingButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+
+    <Button
+        android:id="@+id/clearPizzaButton"
+        android:layout_width="176dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/clearPizzaButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/addToppingButton"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <Button
+        android:id="@+id/checkoutButton"
+        android:layout_width="350dp"
+        android:layout_height="54dp"
+        android:text="@string/checkoutButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addToppingButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="108dp"
+        android:layout_height="35dp"
+        android:text="@string/deliveryCheckbox"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pizzaImage" />
+
+    <ImageView
+        android:id="@+id/pizzaImage"
+        android:layout_width="164dp"
+        android:layout_height="137dp"
+        android:layout_marginTop="168dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pizza" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="349dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:foregroundGravity="center_vertical|center|center_horizontal"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:maxWidth="100dp"
+        app:columnCount="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="2">
+
+    </androidx.gridlayout.widget.GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
